@@ -6,7 +6,7 @@ function TareaFormulario(props){
   const [input,setInput] = useState('');
 const manejarCambio = e => {
   setInput(e.target.value);
-}
+};
 
   const manejarEnvio = e => {
     e.preventDefault();
@@ -14,10 +14,10 @@ const manejarCambio = e => {
       id: uuidv4(),
       texto: input,
       completada: false
-    }
+    };
 
     props.onSubmit(tareaNueva);
-  }
+  };
   return(
     <form
     onSubmit={manejarEnvio} 
